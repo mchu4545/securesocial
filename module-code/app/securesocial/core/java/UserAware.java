@@ -16,6 +16,7 @@
  */
 package securesocial.core.java;
 
+import javax.inject.Inject;
 import play.libs.F;
 import play.mvc.Action;
 import play.mvc.Http;
@@ -43,6 +44,7 @@ import static play.libs.F.Promise;
 public class UserAware extends Action<UserAwareAction> {
     RuntimeEnvironment env;
 
+    @Inject
     public UserAware(RuntimeEnvironment<?> env) throws Throwable {
         this.env = env;
     }
